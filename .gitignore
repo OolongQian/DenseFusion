@@ -10,3 +10,5 @@ __init__.*
 YCB_Video_toolbox
 trained_checkpoints
 .idea
+masked_images
+masked_plds

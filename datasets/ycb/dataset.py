@@ -25,7 +25,8 @@ class PoseDataset(data.Dataset):
         self.root = root
         self.add_noise = add_noise
         self.noise_trans = noise_trans
-
+        
+        # put all data instances in self.list, separate them into self.real and self.syn.
         self.list = []
         self.real = []
         self.syn = []
@@ -46,7 +47,8 @@ class PoseDataset(data.Dataset):
         self.length = len(self.list)
         self.len_real = len(self.real)
         self.len_syn = len(self.syn)
-
+        
+        # read and store point cloud models.
         class_file = open('datasets/ycb/dataset_config/classes.txt')
         class_id = 1
         self.cld = {}
