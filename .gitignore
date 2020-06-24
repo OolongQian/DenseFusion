@@ -12,3 +12,5 @@ trained_checkpoints
 .idea
 masked_images
 masked_plds
+eval_result
+
