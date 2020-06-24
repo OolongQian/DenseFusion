@@ -291,7 +291,7 @@ for now in range(0, 2949, 100):
 			my_result_wo_refine.append([0.0 for i in range(7)])
 			my_result.append([0.0 for i in range(7)])
 	
-	# scio.savemat('{0}/{1}.mat'.format(result_wo_refine_dir, '_'.join(testlist[now].split('/'))),
-	#              {'poses': my_result_wo_refine})
-	# scio.savemat('{0}/{1}.mat'.format(result_refine_dir, '_'.join(testlist[now].split('/'))), {'poses': my_result})
+	scio.savemat('{0}/{1}.mat'.format(result_wo_refine_dir, '_'.join(testlist[now].split('/'))),
+	             {'poses': my_result_wo_refine})
+	scio.savemat('{0}/{1}.mat'.format(result_refine_dir, '_'.join(testlist[now].split('/'))), {'poses': my_result})
 	print("Finish No.{0} keyframe".format(now))
